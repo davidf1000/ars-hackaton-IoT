@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8">
+    <title>Bar Chart</title>
+    <script src="Chart.bundle.js"></script>
+    <script src="utils.js"></script>
+    <style>
+    canvas {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    </style>
+</head>
+
+<body>
+        <canvas id="myChart" width="300" height="100"></canvas>
+<script>
+var   datos =  window.AppInventor.getWebViewString() ;
+        datos = datos.split("|"); 
+webstring0=datos[0];
+webstring1=datos[1].split(',');
+webstring2=datos[2].split(',');
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels:webstring2,
+        datasets: [{
+            label: webstring0,
+           // data: [12, 19, 3, 5, 2, 3],
+		   data: webstring1 ,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+// Juan Antonio Villalpando
+</script>
+</body>
+</html>

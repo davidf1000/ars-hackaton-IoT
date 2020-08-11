@@ -1,0 +1,55 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="3lE=J`5+AJSyXWg~a:@+" x="-873" y="-277">
+    <mutation component_type="Button" is_generic="false" instance_name="home_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">home_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="5cDAMyShx0qbDTb#J-{9">
+        <value name="SCREEN">
+          <block type="text" id="!**L-Y2pn6qvNXGc(Xm,">
+            <field name="TEXT">Home_Monitor</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="LHH/ls.m-yd):tGSC{]r" x="-881" y="-189">
+    <mutation component_type="Button" is_generic="false" instance_name="p2p_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">p2p_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="zOkVF+K.1z%GU:q2QP}A">
+        <value name="SCREEN">
+          <block type="text" id=":g|!#%g+;#/HL8v~./qJ">
+            <field name="TEXT">Menu_P2P</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="+KaNSk3g.=8c?]:NynFI" x="-880" y="-94">
+    <mutation component_type="Button" is_generic="false" instance_name="maps_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">maps_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="x])Kw0_8i@q{BHFmHZdx">
+        <value name="SCREEN">
+          <block type="text" id="vbfdMKX~3v*V#/@o@8i+">
+            <field name="TEXT">Menu_Maps</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="MqnrR|qg,7.mH5/@0(6U" x="-860" y="0">
+    <mutation component_type="Button" is_generic="false" instance_name="profile_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">profile_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="=%hxDd=twYz.n_A7_;gs">
+        <value name="SCREEN">
+          <block type="text" id="u@/c?ZD;3UQPzXg,SC`_">
+            <field name="TEXT">Menu_Profile</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="207" language-version="32"></yacodeblocks>
+</xml>

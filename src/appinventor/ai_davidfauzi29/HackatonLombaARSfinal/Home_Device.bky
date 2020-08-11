@@ -1,0 +1,338 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="global_declaration" id="A|9fJ`I8F.vOwi,YI7en" x="-274" y="-508">
+    <field name="NAME">datos</field>
+    <value name="VALUE">
+      <block type="text" id="{,vx,:z2iSitWLTRp$v%">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="UULQXoeWKJt:n-f#e+GL" x="-272" y="-472">
+    <field name="NAME">count</field>
+    <value name="VALUE">
+      <block type="math_number" id="J~QL|@fI{aRU$AH#GT($">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="610+Dp}Py7Msq`,Ij8=G" x="-878" y="-411">
+    <mutation component_type="Button" is_generic="false" instance_name="monitor_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">monitor_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="vL4K3}H=To^R^p_;6b-c">
+        <value name="SCREEN">
+          <block type="text" id=")K6CCO5YhOGd|?O:M:F~">
+            <field name="TEXT">Home_Monitor</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="_@1I{inDZ^^IzLQoMhr7" x="-288" y="-425">
+    <mutation component_type="Form" is_generic="false" instance_name="Home_Device" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">Home_Device</field>
+    <statement name="DO">
+      <block type="procedures_callnoreturn" id="G?T:95NRs}iGYkKQYu/E" inline="false">
+        <mutation name="checkcurrentcondition"></mutation>
+        <field name="PROCNAME">checkcurrentcondition</field>
+        <next>
+          <block type="lexical_variable_set" id="rB%9`/KyAiXxJBfZQi+;" inline="false">
+            <field name="VAR">global datos</field>
+            <value name="VALUE">
+              <block type="text_join" id="e1/1OC[2ABh:Yty?!]pg" inline="false">
+                <mutation items="11"></mutation>
+                <value name="ADD0">
+                  <block type="math_number" id="*]{lA0xqE`|j.rJWRh+u">
+                    <field name="NUM">16</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="text" id="a3]aKC$)`xM3lTyG;Hs;">
+                    <field name="TEXT">,</field>
+                  </block>
+                </value>
+                <value name="ADD2">
+                  <block type="math_number" id="{HXAD$?|/T%O!:6^f3!B">
+                    <field name="NUM">10</field>
+                  </block>
+                </value>
+                <value name="ADD3">
+                  <block type="text" id="!7Y0Tr}rd8hd(Sp4JF5|">
+                    <field name="TEXT">,</field>
+                  </block>
+                </value>
+                <value name="ADD4">
+                  <block type="math_number" id="$S!R(wC!HMg`@)7H_4B5">
+                    <field name="NUM">5</field>
+                  </block>
+                </value>
+                <value name="ADD5">
+                  <block type="text" id="1%}7(`1*dYE~J`:QJtQ#">
+                    <field name="TEXT">|</field>
+                  </block>
+                </value>
+                <value name="ADD6">
+                  <block type="text" id="n`+2npxW2;DY4`?*8!$#">
+                    <field name="TEXT">Fridge</field>
+                  </block>
+                </value>
+                <value name="ADD7">
+                  <block type="text" id="US_U3_3O_A2IPh:n;rUP">
+                    <field name="TEXT">,</field>
+                  </block>
+                </value>
+                <value name="ADD8">
+                  <block type="text" id="G3Z9j,2T)R;ekkal9wZW">
+                    <field name="TEXT">AC</field>
+                  </block>
+                </value>
+                <value name="ADD9">
+                  <block type="text" id="^@GWBoniZ6^|lON:YE3~">
+                    <field name="TEXT">,</field>
+                  </block>
+                </value>
+                <value name="ADD10">
+                  <block type="text" id="ceB]r1WpwBV!VWpk+g(V">
+                    <field name="TEXT">TV</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="T3Vq0%EqBFV{[D*^C$Gx" inline="false">
+                <mutation component_type="WebViewer" set_or_get="set" property_name="WebViewString" is_generic="false" instance_name="WebViewer1"></mutation>
+                <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                <field name="PROP">WebViewString</field>
+                <value name="VALUE">
+                  <block type="lexical_variable_get" id="?`Q}E8D5`Ml$gn{*;_u[">
+                    <field name="VAR">global datos</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="m]tHb]Nc#e+:ltiqTYB*" inline="false">
+                    <mutation component_type="WebViewer" method_name="GoToUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                    <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                    <value name="ARG0">
+                      <block type="text" id="oGK]VTm4-N`G-788(V+]">
+                        <field name="TEXT">file:///mnt/sdcard/AppInventor/assets/piechart.htm</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id=",Syq;/w[2*B[^jIj]42J" x="268" y="-415">
+    <field name="NAME">checkcurrentcondition</field>
+    <statement name="STACK">
+      <block type="lexical_variable_set" id="e4oS+=}*TSkUFFS%cMHA">
+        <field name="VAR">global count</field>
+        <value name="VALUE">
+          <block type="math_number" id="akv[|HQB~U2?lU:G%Y$C">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="#R-y%h~^;i{|Ww^)4;.+">
+            <value name="IF0">
+              <block type="component_set_get" id="!(m8V~1S;{DDp!Q{E1.A">
+                <mutation component_type="Switch" set_or_get="get" property_name="On" is_generic="false" instance_name="TV"></mutation>
+                <field name="COMPONENT_SELECTOR">TV</field>
+                <field name="PROP">On</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="lexical_variable_set" id="@yM-o#`)X~m1D7YQVC~J">
+                <field name="VAR">global count</field>
+                <value name="VALUE">
+                  <block type="math_add" id="pa)r8.ZZ;CeeI[BnM2?)">
+                    <mutation items="2"></mutation>
+                    <value name="NUM0">
+                      <block type="lexical_variable_get" id="d!/,3@/H{oII^nhwklnY">
+                        <field name="VAR">global count</field>
+                      </block>
+                    </value>
+                    <value name="NUM1">
+                      <block type="math_number" id="Ah[ET]D0Iv!0kg$H`#Xy">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="controls_if" id=")nN^y[Qn!B+6G2Z?is(n">
+                <value name="IF0">
+                  <block type="component_set_get" id="FmyL2!x^VlfKKrX|u+xH">
+                    <mutation component_type="Switch" set_or_get="get" property_name="On" is_generic="false" instance_name="fridge"></mutation>
+                    <field name="COMPONENT_SELECTOR">fridge</field>
+                    <field name="PROP">On</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="lexical_variable_set" id="1):ML%Btl/n0B,EHnzUy">
+                    <field name="VAR">global count</field>
+                    <value name="VALUE">
+                      <block type="math_add" id="(lY{u8MO|dEZ#x|/K3D-">
+                        <mutation items="2"></mutation>
+                        <value name="NUM0">
+                          <block type="lexical_variable_get" id="e:AKCQdgv/yH3lL5D.sa">
+                            <field name="VAR">global count</field>
+                          </block>
+                        </value>
+                        <value name="NUM1">
+                          <block type="math_number" id="}%?+T_HAg97y,B6{|976">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id=":qiz}MvW@pw*=(zu#EDH">
+                    <value name="IF0">
+                      <block type="component_set_get" id="FwHFjcAeAS8@Vsz;Zk)1">
+                        <mutation component_type="Switch" set_or_get="get" property_name="On" is_generic="false" instance_name="AC"></mutation>
+                        <field name="COMPONENT_SELECTOR">AC</field>
+                        <field name="PROP">On</field>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="lexical_variable_set" id="_3i]}z7~jzr|(F:5:P^_">
+                        <field name="VAR">global count</field>
+                        <value name="VALUE">
+                          <block type="math_add" id="|sp,5X`$1SL{A2]Vhb2+">
+                            <mutation items="2"></mutation>
+                            <value name="NUM0">
+                              <block type="lexical_variable_get" id="3x+l(81m6Bni/O%mEEx[">
+                                <field name="VAR">global count</field>
+                              </block>
+                            </value>
+                            <value name="NUM1">
+                              <block type="math_number" id="G{8Zvlg.(%NO@?42asuM">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="component_set_get" id="G2s8y/]j`yL++%2o7xs@">
+                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="device_quantity"></mutation>
+                        <field name="COMPONENT_SELECTOR">device_quantity</field>
+                        <field name="PROP">Text</field>
+                        <value name="VALUE">
+                          <block type="lexical_variable_get" id="AWEk*8LFjS$+b/B6HQQ2">
+                            <field name="VAR">global count</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="3^^2523=4BVpJ^jJm]k7" x="-876" y="-328">
+    <mutation component_type="Button" is_generic="false" instance_name="device_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">device_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="HPN03KD[P[q:qb7Og*x=">
+        <value name="SCREEN">
+          <block type="text" id="@r7J.MLf{1JYXtZ46AS+">
+            <field name="TEXT">Home_Device</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="+GY@g$o8?IZ-80$i=WQ-" x="-873" y="-239">
+    <mutation component_type="Button" is_generic="false" instance_name="usage_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">usage_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="fz}*vx|?{ElM!gA8-?eZ">
+        <value name="SCREEN">
+          <block type="text" id="m@E}`JO%GoOyL9Bg%a#/">
+            <field name="TEXT">Home_Usage</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="3lE=J`5+AJSyXWg~a:@+" x="-874" y="-143">
+    <mutation component_type="Button" is_generic="false" instance_name="home_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">home_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="5cDAMyShx0qbDTb#J-{9">
+        <value name="SCREEN">
+          <block type="text" id="!**L-Y2pn6qvNXGc(Xm,">
+            <field name="TEXT">Home_Monitor</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="LHH/ls.m-yd):tGSC{]r" x="-872" y="-52">
+    <mutation component_type="Button" is_generic="false" instance_name="p2p_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">p2p_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="zOkVF+K.1z%GU:q2QP}A">
+        <value name="SCREEN">
+          <block type="text" id=":g|!#%g+;#/HL8v~./qJ">
+            <field name="TEXT">Menu_P2P</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="text" id="24" x="-15" y="-6">
+    <field name="TEXT">file:///android_asset/piechart.htm</field>
+  </block>
+  <block type="component_event" id="+KaNSk3g.=8c?]:NynFI" x="-858" y="43">
+    <mutation component_type="Button" is_generic="false" instance_name="maps_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">maps_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="x])Kw0_8i@q{BHFmHZdx">
+        <value name="SCREEN">
+          <block type="text" id="vbfdMKX~3v*V#/@o@8i+">
+            <field name="TEXT">Menu_Maps</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="C*amqo/8U~`QO/#NoVdZ" x="-275" y="69">
+    <mutation component_type="Switch" is_generic="true" event_name="Changed"></mutation>
+    <statement name="DO">
+      <block type="procedures_callnoreturn" id="wZ6NY_{bC%WR5TvGu75/" inline="false">
+        <mutation name="checkcurrentcondition"></mutation>
+        <field name="PROCNAME">checkcurrentcondition</field>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="MqnrR|qg,7.mH5/@0(6U" x="-851" y="130">
+    <mutation component_type="Button" is_generic="false" instance_name="profile_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">profile_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="=%hxDd=twYz.n_A7_;gs">
+        <value name="SCREEN">
+          <block type="text" id="u@/c?ZD;3UQPzXg,SC`_">
+            <field name="TEXT">Menu_Profile</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="207" language-version="32"></yacodeblocks>
+</xml>

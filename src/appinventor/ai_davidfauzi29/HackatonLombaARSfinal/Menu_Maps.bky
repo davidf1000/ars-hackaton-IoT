@@ -1,0 +1,559 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="global_declaration" id="0LE{(Yh:G,Jm/H3@-{8V" x="84" y="-654">
+    <field name="NAME">lan</field>
+    <value name="VALUE">
+      <block type="math_number" id="f(:mv#(Rta?wcl$U[{OH">
+        <field name="NUM">-6.183363</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="#b@~S41N(D]#{ukVm,ue" x="85" y="-618">
+    <field name="NAME">lon</field>
+    <value name="VALUE">
+      <block type="math_number" id="me%tQeW!p6Wm!mvQ+W*R">
+        <field name="NUM">106.987128</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="#0jHYO=c5Ggp6X*:L=0O" x="-198" y="-587">
+    <field name="NAME">mark</field>
+    <value name="VALUE">
+      <block type="math_number" id="$`l;r(7PI,Ih0CRQ8DpK">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="0a2D#0RJ!Qv:*bs`KXVE" x="-186" y="-457">
+    <mutation component_type="Form" is_generic="false" instance_name="Menu_Maps" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">Menu_Maps</field>
+    <statement name="DO">
+      <block type="component_set_get" id="ei8V%Bi7I9-jpCSq68WK">
+        <mutation component_type="LocationSensor" set_or_get="set" property_name="ProviderName" is_generic="false" instance_name="LocationSensor1"></mutation>
+        <field name="COMPONENT_SELECTOR">LocationSensor1</field>
+        <field name="PROP">ProviderName</field>
+        <value name="VALUE">
+          <block type="text" id="KAQl)cL4J5IiLhZj1cT7">
+            <field name="TEXT">network</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="3lE=J`5+AJSyXWg~a:@+" x="-929" y="-310">
+    <mutation component_type="Button" is_generic="false" instance_name="home_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">home_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="5cDAMyShx0qbDTb#J-{9">
+        <value name="SCREEN">
+          <block type="text" id="!**L-Y2pn6qvNXGc(Xm,">
+            <field name="TEXT">Home_Monitor</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="/#Os2?D6vZ7rrsb7iKn_" x="-198" y="-315">
+    <mutation component_type="Clock" is_generic="false" instance_name="Clock1" event_name="Timer"></mutation>
+    <field name="COMPONENT_SELECTOR">Clock1</field>
+    <statement name="DO">
+      <block type="component_set_get" id="GaiSv`mkpUiS8P;Qw6hg">
+        <mutation component_type="LocationSensor" set_or_get="set" property_name="ProviderName" is_generic="false" instance_name="LocationSensor1"></mutation>
+        <field name="COMPONENT_SELECTOR">LocationSensor1</field>
+        <field name="PROP">ProviderName</field>
+        <value name="VALUE">
+          <block type="text" id="P:=8g?E|uy4XmjB}^[2/">
+            <field name="TEXT">network</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_method" id="X=p$VaDFMKUV?y{d%G9~">
+            <mutation component_type="Map" method_name="PanTo" is_generic="false" instance_name="Map1"></mutation>
+            <field name="COMPONENT_SELECTOR">Map1</field>
+            <value name="ARG0">
+              <block type="component_set_get" id="gE39K6*^Kebmw?OR%to|">
+                <mutation component_type="LocationSensor" set_or_get="get" property_name="Latitude" is_generic="false" instance_name="LocationSensor1"></mutation>
+                <field name="COMPONENT_SELECTOR">LocationSensor1</field>
+                <field name="PROP">Latitude</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="component_set_get" id="l.0bDfL]4U,Xhxr-FDP:">
+                <mutation component_type="LocationSensor" set_or_get="get" property_name="Longitude" is_generic="false" instance_name="LocationSensor1"></mutation>
+                <field name="COMPONENT_SELECTOR">LocationSensor1</field>
+                <field name="PROP">Longitude</field>
+              </block>
+            </value>
+            <value name="ARG2">
+              <block type="math_number" id="F}ySkvQ3AGqOPBC.Lu1^">
+                <field name="NUM">20</field>
+              </block>
+            </value>
+            <next>
+              <block type="lexical_variable_set" id="vFc!QlMZ@@_+q`~T8)vb">
+                <field name="VAR">global mark</field>
+                <value name="VALUE">
+                  <block type="component_method" id="i6!#X=;4e|,#jP8;*oxV">
+                    <mutation component_type="Map" method_name="CreateMarker" is_generic="false" instance_name="Map1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Map1</field>
+                    <value name="ARG0">
+                      <block type="math_add" id="Feg28wH((Ns~%3:%ly(j">
+                        <mutation items="2"></mutation>
+                        <value name="NUM0">
+                          <block type="lexical_variable_get" id="v|;.#5j3W{:$DCHOLUD#">
+                            <field name="VAR">global lan</field>
+                          </block>
+                        </value>
+                        <value name="NUM1">
+                          <block type="math_number" id="$xY-FYgUJUH`rAS1/`oV">
+                            <field name="NUM">0.00022</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block type="math_add" id="jUHt@QMqJ/L-=n/~TCJ_">
+                        <mutation items="2"></mutation>
+                        <value name="NUM0">
+                          <block type="lexical_variable_get" id="RAW.ODK3:):OP?Sl--b1">
+                            <field name="VAR">global lon</field>
+                          </block>
+                        </value>
+                        <value name="NUM1">
+                          <block type="math_number" id="}()A8^t)N_DW(92ZLxHg">
+                            <field name="NUM">0.00016</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="lexical_variable_set" id="VD~m^%CuCYj}+lxiTA{c">
+                    <field name="VAR">global mark</field>
+                    <value name="VALUE">
+                      <block type="component_method" id=",?f$t=`wE?n.m]y;L=}2">
+                        <mutation component_type="Map" method_name="CreateMarker" is_generic="false" instance_name="Map1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Map1</field>
+                        <value name="ARG0">
+                          <block type="math_add" id="Ra^D{dKS@Y3~m_#pJp@:">
+                            <mutation items="2"></mutation>
+                            <value name="NUM0">
+                              <block type="lexical_variable_get" id="4@GM$oO2/ohNyk|*Dmd7">
+                                <field name="VAR">global lan</field>
+                              </block>
+                            </value>
+                            <value name="NUM1">
+                              <block type="math_number" id="gFJ7!KJS*~gw:t0?@^(M">
+                                <field name="NUM">-0.0003</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="math_add" id="tTOk_R;w5:n:!|=E_Dc_">
+                            <mutation items="2"></mutation>
+                            <value name="NUM0">
+                              <block type="lexical_variable_get" id="yaTZ/qNs-AgHOR{J6yru">
+                                <field name="VAR">global lon</field>
+                              </block>
+                            </value>
+                            <value name="NUM1">
+                              <block type="math_number" id=",}StHS0Qq7)suT?xG%5q">
+                                <field name="NUM">0.0004</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="lexical_variable_set" id="ZPrXi$li@1r^`0ED/HB,">
+                        <field name="VAR">global mark</field>
+                        <value name="VALUE">
+                          <block type="component_method" id="SWLF`#MsD(`[W)g9z8j5">
+                            <mutation component_type="Map" method_name="CreateMarker" is_generic="false" instance_name="Map1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Map1</field>
+                            <value name="ARG0">
+                              <block type="math_add" id=",M8T7*!n6?rbeR|spP%n">
+                                <mutation items="2"></mutation>
+                                <value name="NUM0">
+                                  <block type="lexical_variable_get" id="#/;Lwc@?QZ/^R_a@WQ3e">
+                                    <field name="VAR">global lan</field>
+                                  </block>
+                                </value>
+                                <value name="NUM1">
+                                  <block type="math_number" id="*WV3=7+7k|UWS-+u,]RT">
+                                    <field name="NUM">-0.0002</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block type="math_add" id="C-(]JH]*eNyJ:+9oc.zy">
+                                <mutation items="2"></mutation>
+                                <value name="NUM0">
+                                  <block type="lexical_variable_get" id="#N+}P_zvHUxV+dU!7YH_">
+                                    <field name="VAR">global lon</field>
+                                  </block>
+                                </value>
+                                <value name="NUM1">
+                                  <block type="math_number" id="y]+D8[d?,J@BfnY:~r^%">
+                                    <field name="NUM">0.0002</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="lexical_variable_set" id="el]F:gV1Q^Vc5dxu;0|p">
+                            <field name="VAR">global mark</field>
+                            <value name="VALUE">
+                              <block type="component_method" id=",Mp2$#Lp%bQANg^^O!.n">
+                                <mutation component_type="Map" method_name="CreateMarker" is_generic="false" instance_name="Map1"></mutation>
+                                <field name="COMPONENT_SELECTOR">Map1</field>
+                                <value name="ARG0">
+                                  <block type="math_add" id="m32d=i#dj2:J8{kNskKr">
+                                    <mutation items="2"></mutation>
+                                    <value name="NUM0">
+                                      <block type="lexical_variable_get" id="1Dg-YzKDO5mCNYBLaT@8">
+                                        <field name="VAR">global lan</field>
+                                      </block>
+                                    </value>
+                                    <value name="NUM1">
+                                      <block type="math_number" id="QarZ{G^_MJ0p.t@`6]Ag">
+                                        <field name="NUM">-0.0001</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <block type="math_add" id="5C.#iG2pnF9lPd=lE!$+">
+                                    <mutation items="2"></mutation>
+                                    <value name="NUM0">
+                                      <block type="lexical_variable_get" id="uq=k32lx$-r1f:JKYLW=">
+                                        <field name="VAR">global lon</field>
+                                      </block>
+                                    </value>
+                                    <value name="NUM1">
+                                      <block type="math_number" id="J1$mMnoE~cTiRdCs[U0Y">
+                                        <field name="NUM">0.00007</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="lexical_variable_set" id="`|d8EjOk99](P;xF$QlL">
+                                <field name="VAR">global mark</field>
+                                <value name="VALUE">
+                                  <block type="component_method" id="I()klRdGk(EMk|0UP@cw">
+                                    <mutation component_type="Map" method_name="CreateMarker" is_generic="false" instance_name="Map1"></mutation>
+                                    <field name="COMPONENT_SELECTOR">Map1</field>
+                                    <value name="ARG0">
+                                      <block type="math_add" id="B$|{#uTeyaxI~f)sniaE">
+                                        <mutation items="2"></mutation>
+                                        <value name="NUM0">
+                                          <block type="lexical_variable_get" id="}Z$p{g.t!e7fZc_;}Z~;">
+                                            <field name="VAR">global lan</field>
+                                          </block>
+                                        </value>
+                                        <value name="NUM1">
+                                          <block type="math_number" id="Jbe8[}D+UO6eK@:n@.[K">
+                                            <field name="NUM">-0.00008</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="ARG1">
+                                      <block type="math_add" id="Ozc2AmLVR.8=0$9iNm3d">
+                                        <mutation items="2"></mutation>
+                                        <value name="NUM0">
+                                          <block type="lexical_variable_get" id="X{~s$jnqEkAEVDl{1GcW">
+                                            <field name="VAR">global lon</field>
+                                          </block>
+                                        </value>
+                                        <value name="NUM1">
+                                          <block type="math_number" id="MH7W-+H7o=^Fkkw$02Z+">
+                                            <field name="NUM">-0.00008</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="lexical_variable_set" id="C_GZ=pI,fO%yaXLE!.5o">
+                                    <field name="VAR">global mark</field>
+                                    <value name="VALUE">
+                                      <block type="component_method" id="p[IliIabj%2.:#zwu!_Q">
+                                        <mutation component_type="Map" method_name="CreateMarker" is_generic="false" instance_name="Map1"></mutation>
+                                        <field name="COMPONENT_SELECTOR">Map1</field>
+                                        <value name="ARG0">
+                                          <block type="math_add" id=",cg]o:Ata|mc3CeciE$E">
+                                            <mutation items="2"></mutation>
+                                            <value name="NUM0">
+                                              <block type="lexical_variable_get" id="k#QTiy4~oU.@Uz0Jsh+x">
+                                                <field name="VAR">global lan</field>
+                                              </block>
+                                            </value>
+                                            <value name="NUM1">
+                                              <block type="math_number" id="^J)1Wm,XDK]CpU6@g=pn">
+                                                <field name="NUM">0</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="ARG1">
+                                          <block type="math_add" id="J66;|]G=B:;Lv84PiF*;">
+                                            <mutation items="2"></mutation>
+                                            <value name="NUM0">
+                                              <block type="lexical_variable_get" id="DOkaI*dU~e|/e37Sk]7h">
+                                                <field name="VAR">global lon</field>
+                                              </block>
+                                            </value>
+                                            <value name="NUM1">
+                                              <block type="math_number" id="$8;,WF_bXiZ3cgZSrYp6">
+                                                <field name="NUM">0.00014</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="lexical_variable_set" id="LXbnBh3]D)GBW|#gXk4q">
+                                        <field name="VAR">global mark</field>
+                                        <value name="VALUE">
+                                          <block type="component_method" id="%sQjw7oFt@zUot{8K~R1">
+                                            <mutation component_type="Map" method_name="CreateMarker" is_generic="false" instance_name="Map1"></mutation>
+                                            <field name="COMPONENT_SELECTOR">Map1</field>
+                                            <value name="ARG0">
+                                              <block type="math_add" id="Re:!AZQF?T.U}:xu0@4s">
+                                                <mutation items="2"></mutation>
+                                                <value name="NUM0">
+                                                  <block type="lexical_variable_get" id="Q;J{MVpA_|L9ZjoQtGAr">
+                                                    <field name="VAR">global lan</field>
+                                                  </block>
+                                                </value>
+                                                <value name="NUM1">
+                                                  <block type="math_number" id="NEux]2({gq^EG1Y(l7Ky">
+                                                    <field name="NUM">0</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="ARG1">
+                                              <block type="math_add" id=")j:qZN]3w*!+,wq0RW`F">
+                                                <mutation items="2"></mutation>
+                                                <value name="NUM0">
+                                                  <block type="lexical_variable_get" id="A$avxnPy2(]Ahgh=ONkC">
+                                                    <field name="VAR">global lon</field>
+                                                  </block>
+                                                </value>
+                                                <value name="NUM1">
+                                                  <block type="math_number" id=";r})7Fo+1Ctt$?Ko;2v:">
+                                                    <field name="NUM">0.00023</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="lexical_variable_set" id="J2Ahq*V$`1lC;6u6Bvm}">
+                                            <field name="VAR">global mark</field>
+                                            <value name="VALUE">
+                                              <block type="component_method" id="L?G!tadLm^0%y=QNzhf^">
+                                                <mutation component_type="Map" method_name="CreateMarker" is_generic="false" instance_name="Map1"></mutation>
+                                                <field name="COMPONENT_SELECTOR">Map1</field>
+                                                <value name="ARG0">
+                                                  <block type="math_add" id="2~55jv_;_L-2LA@5(?}s">
+                                                    <mutation items="2"></mutation>
+                                                    <value name="NUM0">
+                                                      <block type="lexical_variable_get" id="-fI$i%S2wamUa=i/ly@H">
+                                                        <field name="VAR">global lan</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="NUM1">
+                                                      <block type="math_number" id="~n]D6gEmJHhstWJm*eL+">
+                                                        <field name="NUM">0.00023</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="ARG1">
+                                                  <block type="math_add" id="5#L+o2jq^p@.klg;uae1">
+                                                    <mutation items="2"></mutation>
+                                                    <value name="NUM0">
+                                                      <block type="lexical_variable_get" id="wiF|lw=U@b$BC7AEgPD?">
+                                                        <field name="VAR">global lon</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="NUM1">
+                                                      <block type="math_number" id="BptW[WA:PoU=KE5a-_bJ">
+                                                        <field name="NUM">0.00005</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="lexical_variable_set" id="ln0Q%DJiF._YCGSB^9z1">
+                                                <field name="VAR">global mark</field>
+                                                <value name="VALUE">
+                                                  <block type="component_method" id="w97~@}$LEUCWq#*4^6o}">
+                                                    <mutation component_type="Map" method_name="CreateMarker" is_generic="false" instance_name="Map1"></mutation>
+                                                    <field name="COMPONENT_SELECTOR">Map1</field>
+                                                    <value name="ARG0">
+                                                      <block type="math_add" id="qwaR*M}RPHpyO2+0H^?C">
+                                                        <mutation items="2"></mutation>
+                                                        <value name="NUM0">
+                                                          <block type="lexical_variable_get" id="`YXJZS4B-+mNe6EM`XaP">
+                                                            <field name="VAR">global lan</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="NUM1">
+                                                          <block type="math_number" id=")ho$~=jf;~m/SAY6aIn!">
+                                                            <field name="NUM">0.00023</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <value name="ARG1">
+                                                      <block type="math_add" id="$q|4FNK(Mlc:*4x2EqWl">
+                                                        <mutation items="2"></mutation>
+                                                        <value name="NUM0">
+                                                          <block type="lexical_variable_get" id="JL*]rDeR|.2{ayYXf~_,">
+                                                            <field name="VAR">global lon</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="NUM1">
+                                                          <block type="math_number" id="Mi`GZ67VWO63D;o.pLXR">
+                                                            <field name="NUM">-0.00005</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="lexical_variable_set" id="?.ra_f[tMAb{Y=J6xfB9">
+                                                    <field name="VAR">global mark</field>
+                                                    <value name="VALUE">
+                                                      <block type="component_method" id="V|feu0]19`RG+4ZQ#mmD">
+                                                        <mutation component_type="Map" method_name="CreateMarker" is_generic="false" instance_name="Map1"></mutation>
+                                                        <field name="COMPONENT_SELECTOR">Map1</field>
+                                                        <value name="ARG0">
+                                                          <block type="math_add" id="|vfYdr=_z|W:;0P?Y=Vn">
+                                                            <mutation items="2"></mutation>
+                                                            <value name="NUM0">
+                                                              <block type="lexical_variable_get" id="NfzX6O8GeY+LwJfx~sz{">
+                                                                <field name="VAR">global lan</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="NUM1">
+                                                              <block type="math_number" id="DY%]$cYJ~-D^HZ/7-WF;">
+                                                                <field name="NUM">0.00023</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <value name="ARG1">
+                                                          <block type="math_add" id="Udf8]L1?5@l%55+q{uB@">
+                                                            <mutation items="2"></mutation>
+                                                            <value name="NUM0">
+                                                              <block type="lexical_variable_get" id="M)O=dhK,D?(mP6=mGIrB">
+                                                                <field name="VAR">global lon</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="NUM1">
+                                                              <block type="math_number" id="^WL|NtG,b=2Wm2x+)PK0">
+                                                                <field name="NUM">-0.00015</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="LHH/ls.m-yd):tGSC{]r" x="-928" y="-225">
+    <mutation component_type="Button" is_generic="false" instance_name="p2p_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">p2p_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="zOkVF+K.1z%GU:q2QP}A">
+        <value name="SCREEN">
+          <block type="text" id=":g|!#%g+;#/HL8v~./qJ">
+            <field name="TEXT">Menu_P2P</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="+KaNSk3g.=8c?]:NynFI" x="-922" y="-137">
+    <mutation component_type="Button" is_generic="false" instance_name="maps_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">maps_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="x])Kw0_8i@q{BHFmHZdx">
+        <value name="SCREEN">
+          <block type="text" id="vbfdMKX~3v*V#/@o@8i+">
+            <field name="TEXT">Menu_Maps</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="MqnrR|qg,7.mH5/@0(6U" x="-918" y="-35">
+    <mutation component_type="Button" is_generic="false" instance_name="profile_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">profile_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="=%hxDd=twYz.n_A7_;gs">
+        <value name="SCREEN">
+          <block type="text" id="u@/c?ZD;3UQPzXg,SC`_">
+            <field name="TEXT">Menu_Profile</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="ktk(-wB{ZKvcr_g8_{)=" x="-908" y="58">
+    <mutation component_type="Button" is_generic="false" instance_name="report_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">report_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="^.:7DOt33VgZ(uXqIno2">
+        <value name="SCREEN">
+          <block type="text" id="/[fndsrH;{%DD2JYs(@I">
+            <field name="TEXT">Menu_Report</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="207" language-version="32"></yacodeblocks>
+</xml>

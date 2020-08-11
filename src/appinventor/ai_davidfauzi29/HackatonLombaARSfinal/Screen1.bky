@@ -1,0 +1,103 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="global_declaration" id="X3K3)X{uV-Mx/Vy(*RR$" x="-449" y="-318">
+    <field name="NAME">rot</field>
+    <value name="VALUE">
+      <block type="math_number" id="mdI/|3p%0?H0[q31S(F]">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="vv5cIP|!J?h7AcT4pzs5" x="-447" y="-275">
+    <field name="NAME">elapsed</field>
+    <value name="VALUE">
+      <block type="math_number" id="^r4+WV!f@7NeU4}mopr0">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="bEp}_8`cM/l{It%F;%aY" x="-438" y="-226">
+    <mutation component_type="Clock" is_generic="false" instance_name="Clock1" event_name="Timer"></mutation>
+    <field name="COMPONENT_SELECTOR">Clock1</field>
+    <statement name="DO">
+      <block type="lexical_variable_set" id="y(yn)$PfGgn`E3anr#PR">
+        <field name="VAR">global rot</field>
+        <value name="VALUE">
+          <block type="math_add" id="F1Wuys}RI9ue94^S1~dJ">
+            <mutation items="2"></mutation>
+            <value name="NUM0">
+              <block type="lexical_variable_get" id="z0qS_$eQ3jiL$:v:4BFd">
+                <field name="VAR">global rot</field>
+              </block>
+            </value>
+            <value name="NUM1">
+              <block type="math_number" id=":QR(=R5-AX8G]4Vy=Sv+">
+                <field name="NUM">13</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="e6*_Qa57uMj?{ww/%!NQ">
+            <mutation component_type="Image" set_or_get="set" property_name="RotationAngle" is_generic="false" instance_name="Image2"></mutation>
+            <field name="COMPONENT_SELECTOR">Image2</field>
+            <field name="PROP">RotationAngle</field>
+            <value name="VALUE">
+              <block type="lexical_variable_get" id="E${%TW_hv_k[wR!M5YL;">
+                <field name="VAR">global rot</field>
+              </block>
+            </value>
+            <next>
+              <block type="lexical_variable_set" id="z]F0q^g;k[R,nSj;ai[;">
+                <field name="VAR">global elapsed</field>
+                <value name="VALUE">
+                  <block type="math_add" id="f^}P;W5~bKDXDq5=M%$_">
+                    <mutation items="2"></mutation>
+                    <value name="NUM0">
+                      <block type="lexical_variable_get" id=")Jj[4d4C)kcK^p/~#B;4">
+                        <field name="VAR">global elapsed</field>
+                      </block>
+                    </value>
+                    <value name="NUM1">
+                      <block type="math_number" id="n-qXfj+Y0d~_,/AMz@dh">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="Gl@4}Hq2i:|rzs3ure!-">
+                    <value name="IF0">
+                      <block type="math_compare" id="]LN0TCs0/]4`3SPT`sGP">
+                        <field name="OP">GTE</field>
+                        <value name="A">
+                          <block type="lexical_variable_get" id="`S_;O608G--y0IkqbFR.">
+                            <field name="VAR">global elapsed</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="7;OoB~UJRsxEoI!FO2x[">
+                            <field name="NUM">15</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="controls_openAnotherScreen" id="**b^x%xbDB}m;lIRM2hH">
+                        <value name="SCREEN">
+                          <block type="text" id="NH50av|^5W%Y.y9iC=js">
+                            <field name="TEXT">Home_Monitor</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="207" language-version="32"></yacodeblocks>
+</xml>

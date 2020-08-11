@@ -1,0 +1,591 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="610+Dp}Py7Msq`,Ij8=G" x="177" y="-11">
+    <mutation component_type="Button" is_generic="false" instance_name="monitor_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">monitor_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="vL4K3}H=To^R^p_;6b-c">
+        <value name="SCREEN">
+          <block type="text" id=")K6CCO5YhOGd|?O:M:F~">
+            <field name="TEXT">Home_Monitor</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" id="c,[H3n.SF(NN*r-zOsoQ" x="833" y="-39">
+    <field name="NAME">header</field>
+    <value name="VALUE">
+      <block type="lists_create_with" id="dj!?db$hUP5s1mlv`Uh{">
+        <mutation items="3"></mutation>
+        <value name="ADD0">
+          <block type="lists_create_with" id="WOMSMeT{*C7$qQUZ!c-!">
+            <mutation items="2"></mutation>
+            <value name="ADD0">
+              <block type="text" id="MoT460x/Mr^Y{Q~bv9?d">
+                <field name="TEXT">X-M2M-Origin</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="text" id="V3Ii/oj{kGJD71{7W3$A">
+                <field name="TEXT">48745c6e8f33289b:439d46fd719fff43</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="lists_create_with" id=")cGl!afYfxL**G=U|y}~">
+            <mutation items="2"></mutation>
+            <value name="ADD0">
+              <block type="text" id="aOr0R}+UyBjxA_ggL$^j">
+                <field name="TEXT">Content-Type</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="text" id="}]qOkAmSG#qS=}GF@Y.1">
+                <field name="TEXT">application/json;ty=4</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="lists_create_with" id="W`Pt{:,D!(Ru]MnN#s(V">
+            <mutation items="2"></mutation>
+            <value name="ADD0">
+              <block type="text" id="5LjWdw1U_;oRg})Y|E~K">
+                <field name="TEXT">Accept</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="text" id="2Jov}EP4CIf_@5trSlpr">
+                <field name="TEXT">application/json</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="3^^2523=4BVpJ^jJm]k7" x="182" y="56">
+    <mutation component_type="Button" is_generic="false" instance_name="device_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">device_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="HPN03KD[P[q:qb7Og*x=">
+        <value name="SCREEN">
+          <block type="text" id="@r7J.MLf{1JYXtZ46AS+">
+            <field name="TEXT">Home_Device</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="+GY@g$o8?IZ-80$i=WQ-" x="181" y="122">
+    <mutation component_type="Button" is_generic="false" instance_name="usage_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">usage_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="fz}*vx|?{ElM!gA8-?eZ">
+        <value name="SCREEN">
+          <block type="text" id="m@E}`JO%GoOyL9Bg%a#/">
+            <field name="TEXT">Home_Usage</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" id="n,h]q9SJ!#rIJvYb57w:" x="827" y="125">
+    <field name="NAME">url</field>
+    <value name="VALUE">
+      <block type="text" id="CZD$f4?m6vcIE-o:zpCs">
+        <field name="TEXT">https://platform.antares.id:8443/~/antares-cse/antares-id/HackatonProject/household1/la</field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="3lE=J`5+AJSyXWg~a:@+" x="183" y="190">
+    <mutation component_type="Button" is_generic="false" instance_name="home_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">home_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="5cDAMyShx0qbDTb#J-{9">
+        <value name="SCREEN">
+          <block type="text" id="!**L-Y2pn6qvNXGc(Xm,">
+            <field name="TEXT">Home_Monitor</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defreturn" id="Aba~-cC[{m4@I,:vMQlG" x="826" y="166">
+    <mutation>
+      <arg name="input"></arg>
+      <arg name="startTag"></arg>
+      <arg name="endTag"></arg>
+    </mutation>
+    <field name="NAME">snipText</field>
+    <field name="VAR0">input</field>
+    <field name="VAR1">startTag</field>
+    <field name="VAR2">endTag</field>
+    <value name="RETURN">
+      <block type="local_declaration_expression" id="e.o^$4J{+{i;tnk%AVsR">
+        <mutation>
+          <localname name="snip"></localname>
+        </mutation>
+        <field name="VAR0">snip</field>
+        <value name="DECL0">
+          <block type="text" id="H)0+8qq19fA3Mt|haL-?">
+            <field name="TEXT"></field>
+          </block>
+        </value>
+        <value name="RETURN">
+          <block type="controls_do_then_return" id="CnmE3-e]Z8`^%HI0y~U_">
+            <statement name="STM">
+              <block type="lexical_variable_set" id="WWNXdt;7$-xp`MJj@dIL">
+                <field name="VAR">snip</field>
+                <value name="VALUE">
+                  <block type="text_split" id="2:){Wouiw4z{D~XuRMaM">
+                    <mutation mode="SPLITATFIRST"></mutation>
+                    <field name="OP">SPLITATFIRST</field>
+                    <value name="TEXT">
+                      <block type="lists_select_item" id="~?)_HhiZ%W0F}=NtC`ka">
+                        <value name="LIST">
+                          <block type="lists_select_item" id="M?%{*[cu?g7-YGA^,_d:">
+                            <value name="LIST">
+                              <block type="component_method" id="do]g{Hu!UUSO%UEtK=fz">
+                                <mutation component_type="Web" method_name="JsonTextDecode" is_generic="false" instance_name="Web1"></mutation>
+                                <field name="COMPONENT_SELECTOR">Web1</field>
+                                <value name="ARG0">
+                                  <block type="lexical_variable_get" id="B,K9[vwhpz$A2~y(Azg0">
+                                    <field name="VAR">input</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="NUM">
+                              <block type="math_number" id="4xSrk:L}r]5sRn{y4c7v">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="NUM">
+                          <block type="math_number" id="]p6iFl6Rcwvv$S3?cA2P">
+                            <field name="NUM">2</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="AT">
+                      <block type="lexical_variable_get" id="E_gADhthD2gKIsv-+fB)">
+                        <field name="VAR">startTag</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="gK^^)x0YB%lH5s%V%E%P">
+                    <value name="IF0">
+                      <block type="math_compare" id="_n9o6$asv]cDZtmDhD}!">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="lists_length" id="wyaR$*W-=7oGr!#B1Yk;">
+                            <value name="LIST">
+                              <block type="lexical_variable_get" id="AKi%~cuL@/ofdq^lXzj{">
+                                <field name="VAR">snip</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="9*1!,CN2#E}h8QV9SZSH">
+                            <field name="NUM">2</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="lexical_variable_set" id="hcEpdzw8,:;*VOBEGZzN">
+                        <field name="VAR">snip</field>
+                        <value name="VALUE">
+                          <block type="lists_select_item" id="]_o9~W1[#w7R[WkK`/@9">
+                            <value name="LIST">
+                              <block type="lexical_variable_get" id="xaR=JJ/SZgo1p9UjQL:_">
+                                <field name="VAR">snip</field>
+                              </block>
+                            </value>
+                            <value name="NUM">
+                              <block type="math_number" id="D71k/eRrVo:5-*8,Yb?8">
+                                <field name="NUM">2</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="lexical_variable_set" id="XXB?Y#ua;3Iqz7mwH1D]">
+                            <field name="VAR">snip</field>
+                            <value name="VALUE">
+                              <block type="lists_select_item" id="a=A?cyxA(6X]im`Ud*`z">
+                                <value name="LIST">
+                                  <block type="text_split" id="#P?s(0AQ0;$|1wqV%6/4">
+                                    <mutation mode="SPLITATFIRST"></mutation>
+                                    <field name="OP">SPLITATFIRST</field>
+                                    <value name="TEXT">
+                                      <block type="lexical_variable_get" id="Wy@T-Ot;aaDkri/A+L:S">
+                                        <field name="VAR">snip</field>
+                                      </block>
+                                    </value>
+                                    <value name="AT">
+                                      <block type="lexical_variable_get" id="J.iJpQ$?*`z0bq0m}sA.">
+                                        <field name="VAR">endTag</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="NUM">
+                                  <block type="math_number" id="8?FJt6DKb@rV+_UHXUv%">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="VALUE">
+              <block type="lexical_variable_get" id="c_UVr}~N`-pZ}f6jDrHA">
+                <field name="VAR">snip</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="Y(=?.H,#dt`oWxN[T^W)" x="1928" y="133">
+    <field name="NAME">totalcap</field>
+    <value name="VALUE">
+      <block type="math_number" id="(f]=[=j@S):O.}?JRCv[">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="(wf}!,BlW8~k@,,HeLew" x="1927" y="167">
+    <field name="NAME">currentpower</field>
+    <value name="VALUE">
+      <block type="math_number" id="JQAEuiR/=!KtQrZQM7{g">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="oDQe;F07fdrm|?FDch$R" x="179" y="281">
+    <mutation component_type="Form" is_generic="false" instance_name="Home_Monitor" event_name="OtherScreenClosed"></mutation>
+    <field name="COMPONENT_SELECTOR">Home_Monitor</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="si!hn7UzOm|I8`)1W8#/">
+        <value name="SCREEN">
+          <block type="lexical_variable_get" id="aU:h(c@sjmidD`4?)pEo">
+            <mutation>
+              <eventparam name="result"></eventparam>
+            </mutation>
+            <field name="VAR">result</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" id="~+_X-]v@XWBG/9-^^YHB" x="1924" y="202">
+    <field name="NAME">energygenerated</field>
+    <value name="VALUE">
+      <block type="math_number" id="ZkvwMN]t4F~AEy2A?R@Z">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="gcWKx5tkO}K%VPN#!0:e" x="1919" y="246">
+    <field name="NAME">energyusagetoday</field>
+    <value name="VALUE">
+      <block type="math_number" id="#Jo_HQaOfW9EZnzSQxWI">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="LHH/ls.m-yd):tGSC{]r" x="182" y="522">
+    <mutation component_type="Button" is_generic="false" instance_name="p2p_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">p2p_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="zOkVF+K.1z%GU:q2QP}A">
+        <value name="SCREEN">
+          <block type="text" id=":g|!#%g+;#/HL8v~./qJ">
+            <field name="TEXT">Menu_P2P</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="+KaNSk3g.=8c?]:NynFI" x="182" y="595">
+    <mutation component_type="Button" is_generic="false" instance_name="maps_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">maps_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="x])Kw0_8i@q{BHFmHZdx">
+        <value name="SCREEN">
+          <block type="text" id="vbfdMKX~3v*V#/@o@8i+">
+            <field name="TEXT">Menu_Maps</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="pvhfU{ANT~9,kt/L|[{4" x="1836" y="534">
+    <mutation>
+      <arg name="input_responsecontent"></arg>
+    </mutation>
+    <field name="NAME">getall</field>
+    <field name="VAR0">input_responsecontent</field>
+    <statement name="STACK">
+      <block type="lexical_variable_set" id="ifE$4jhi/HlzBA@x}J#o">
+        <field name="VAR">global totalcap</field>
+        <value name="VALUE">
+          <block type="procedures_callreturn" id="FX^v6@m|-lx`(^2l;w8w" inline="false">
+            <mutation name="snipText">
+              <arg name="input"></arg>
+              <arg name="startTag"></arg>
+              <arg name="endTag"></arg>
+            </mutation>
+            <field name="PROCNAME">snipText</field>
+            <value name="ARG0">
+              <block type="lexical_variable_get" id="pI))nC}UBkqffx;luYoq">
+                <field name="VAR">input_responsecontent</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="text" id="X~NP7XEe*y:b`9pz),Hv">
+                <field name="TEXT">"totalcapacity":</field>
+              </block>
+            </value>
+            <value name="ARG2">
+              <block type="text" id=")jCG$E8`KDTt$EX2Oz1a">
+                <field name="TEXT">,</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="lexical_variable_set" id="U/pYK@._B|OthC_U*RHr">
+            <field name="VAR">global currentpower</field>
+            <value name="VALUE">
+              <block type="procedures_callreturn" id="Cf4@LCt!vrkHX{*LrD1e" inline="false">
+                <mutation name="snipText">
+                  <arg name="input"></arg>
+                  <arg name="startTag"></arg>
+                  <arg name="endTag"></arg>
+                </mutation>
+                <field name="PROCNAME">snipText</field>
+                <value name="ARG0">
+                  <block type="lexical_variable_get" id=":*V=JZKUFEaDy9P8.!m}">
+                    <field name="VAR">input_responsecontent</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="text" id="{~^Gg1iPsu8eQsnvT$|E">
+                    <field name="TEXT">"currentpower":</field>
+                  </block>
+                </value>
+                <value name="ARG2">
+                  <block type="text" id="y::MMD1o8B.Gj[/|v{S_">
+                    <field name="TEXT">,</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="lexical_variable_set" id="?JaYhyMNP^wZA-XYkJpi">
+                <field name="VAR">global energygenerated</field>
+                <value name="VALUE">
+                  <block type="procedures_callreturn" id="]a]l?X;_2T)52gV8m]`4" inline="false">
+                    <mutation name="snipText">
+                      <arg name="input"></arg>
+                      <arg name="startTag"></arg>
+                      <arg name="endTag"></arg>
+                    </mutation>
+                    <field name="PROCNAME">snipText</field>
+                    <value name="ARG0">
+                      <block type="lexical_variable_get" id="%XKcO}?{Wt@IZqt%T(p@">
+                        <field name="VAR">input_responsecontent</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block type="text" id="|XanZ?R=wdy;S`#Gyjs:">
+                        <field name="TEXT">"energygenerated":</field>
+                      </block>
+                    </value>
+                    <value name="ARG2">
+                      <block type="text" id="`c9gWADhHF0Z(P%wIB+j">
+                        <field name="TEXT">,</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="lexical_variable_set" id="b!HPe1=CjT,OR]|M6^`F">
+                    <field name="VAR">global energyusagetoday</field>
+                    <value name="VALUE">
+                      <block type="procedures_callreturn" id="8k2#1_8m^=DV:m.8%n-K" inline="false">
+                        <mutation name="snipText">
+                          <arg name="input"></arg>
+                          <arg name="startTag"></arg>
+                          <arg name="endTag"></arg>
+                        </mutation>
+                        <field name="PROCNAME">snipText</field>
+                        <value name="ARG0">
+                          <block type="lexical_variable_get" id="[o|9ObpoJF^3h_/#sI12">
+                            <field name="VAR">input_responsecontent</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="text" id="(Amx2u.rVU8Gj^$)F5]_">
+                            <field name="TEXT">"energyusagetoday":</field>
+                          </block>
+                        </value>
+                        <value name="ARG2">
+                          <block type="text" id="S_de?s^4L^k@jFzmz[pR">
+                            <field name="TEXT">,</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="DG(ELXGq4qJ/^IVDW:Wp">
+                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="label_total_capacity"></mutation>
+                        <field name="COMPONENT_SELECTOR">label_total_capacity</field>
+                        <field name="PROP">Text</field>
+                        <value name="VALUE">
+                          <block type="lexical_variable_get" id="9v|Kx318ZYJ5{))LE:4]">
+                            <field name="VAR">global totalcap</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id=",CHnlIuojshyt+a.?a*t">
+                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="label_usagetoday"></mutation>
+                            <field name="COMPONENT_SELECTOR">label_usagetoday</field>
+                            <field name="PROP">Text</field>
+                            <value name="VALUE">
+                              <block type="lexical_variable_get" id="$pLZIKKD_E|Mi3Dn;Bh=">
+                                <field name="VAR">global energyusagetoday</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="l0TIB#+TjP!hd?5oETgY">
+                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="label_currentpowercons"></mutation>
+                                <field name="COMPONENT_SELECTOR">label_currentpowercons</field>
+                                <field name="PROP">Text</field>
+                                <value name="VALUE">
+                                  <block type="lexical_variable_get" id="*^WI4}cq90J=~%Vnp$rg">
+                                    <field name="VAR">global currentpower</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="component_set_get" id="u[:~TOQ3{fA77pW/P7)F">
+                                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="label_energygenerated"></mutation>
+                                    <field name="COMPONENT_SELECTOR">label_energygenerated</field>
+                                    <field name="PROP">Text</field>
+                                    <value name="VALUE">
+                                      <block type="lexical_variable_get" id="S0e((b|imU9X?Fh?u`NZ">
+                                        <field name="VAR">global energygenerated</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="Icy`+*FShSL9(1Hb2f`J" x="842" y="631">
+    <field name="NAME">getrequest</field>
+    <statement name="STACK">
+      <block type="component_set_get" id="|}f]T261rcZA(}~G+`v_">
+        <mutation component_type="Web" set_or_get="set" property_name="RequestHeaders" is_generic="false" instance_name="Web1"></mutation>
+        <field name="COMPONENT_SELECTOR">Web1</field>
+        <field name="PROP">RequestHeaders</field>
+        <value name="VALUE">
+          <block type="lexical_variable_get" id="9@F1WwRPTby%0p`]#rtF">
+            <field name="VAR">global header</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="snAf9Mz@uIg*|i|92:9m">
+            <mutation component_type="Web" set_or_get="set" property_name="Url" is_generic="false" instance_name="Web1"></mutation>
+            <field name="COMPONENT_SELECTOR">Web1</field>
+            <field name="PROP">Url</field>
+            <value name="VALUE">
+              <block type="lexical_variable_get" id="gm)P8bty1osAzPOG;+1b">
+                <field name="VAR">global url</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_method" id="XkTVV@hs%@S]yu$N6$8Y">
+                <mutation component_type="Web" method_name="Get" is_generic="false" instance_name="Web1"></mutation>
+                <field name="COMPONENT_SELECTOR">Web1</field>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="MqnrR|qg,7.mH5/@0(6U" x="185" y="670">
+    <mutation component_type="Button" is_generic="false" instance_name="profile_btn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">profile_btn</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="=%hxDd=twYz.n_A7_;gs">
+        <value name="SCREEN">
+          <block type="text" id="u@/c?ZD;3UQPzXg,SC`_">
+            <field name="TEXT">Menu_Profile</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id=")-RNP5NCVvH!pAF_h@L;" x="844" y="836">
+    <mutation component_type="Clock" is_generic="false" instance_name="Clock1" event_name="Timer"></mutation>
+    <field name="COMPONENT_SELECTOR">Clock1</field>
+    <statement name="DO">
+      <block type="procedures_callnoreturn" id="n2qWlk8mdI;|)Eh[To%U" inline="false">
+        <mutation name="getrequest"></mutation>
+        <field name="PROCNAME">getrequest</field>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id=")h`zB,%]PG[N,MQ%t}n`" x="835" y="1072">
+    <mutation component_type="Web" is_generic="false" instance_name="Web1" event_name="GotText"></mutation>
+    <field name="COMPONENT_SELECTOR">Web1</field>
+    <statement name="DO">
+      <block type="procedures_callnoreturn" id="S18S|ANFFBVjw?`5@/k-" inline="false">
+        <mutation name="getall">
+          <arg name="input_responsecontent"></arg>
+        </mutation>
+        <field name="PROCNAME">getall</field>
+        <value name="ARG0">
+          <block type="lexical_variable_get" id="H:Kn%/+G~wc,7H9Ro12g">
+            <mutation>
+              <eventparam name="responseContent"></eventparam>
+            </mutation>
+            <field name="VAR">responseContent</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="207" language-version="32"></yacodeblocks>
+</xml>

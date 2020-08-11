@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8">
+    <title>Tarta</title>
+    <script src="Chart.bundle.js"></script>
+    <script src="utils.js"></script>
+    <style>
+    canvas {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    </style>
+</head>
+
+<body>
+	   <canvas id="canvas" width="100" height="100"></canvas>
+
+<script>
+var   datos =  window.AppInventor.getWebViewString() ;
+        datos = datos.split("|"); 
+		webstring1=datos[0].split(',');
+webstring2=datos[1].split(',');
+var ctx = document.getElementById("canvas");
+var myChart = new Chart(ctx, {
+    // type: 'doughnut',
+    type: 'pie',
+	   data:{
+		labels: webstring2,
+		datasets: [
+			{
+				// data: [30, 5, 10, 2, 20, 15],
+				label: 'Device Consumption',
+				data: webstring1,
+				backgroundColor: [
+					"#FF6384",
+					"#36A2EB",
+					"#FFCE56",
+                    "#009900",
+					"#FF33FF",
+					"#FF6633"					
+				],
+				hoverBackgroundColor: [
+					"#FF6384",
+					"#36A2EB",
+					"#FFCE56",
+                    "#009900",
+                    "#FF33FF",
+					"#FF6633"
+				]
+			}]
+	},
+            options: {
+			responsive: true,
+			maintainAspectRatio:true,
+			legend: {
+				display: true
+			},
+			tooltips: {
+				enabled: true,
+			}
+		}     
+});
+// Juan Antonio Villalpando
+</script>
+</body>
+</html>
